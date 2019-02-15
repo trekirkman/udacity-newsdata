@@ -7,7 +7,7 @@
 ## Package Contents
 
 ### 1. newsdata.py
--Python file containing all code to execute the queries and print results
+Python file containing all code to execute the queries and print results
 
 ### 2. newsdata_output.txt
  Plain text file containing printed results from `newsdata.py` 
@@ -33,7 +33,7 @@ Executes an SQL query that returns days where the database logs contained > 1% e
 ## Custom Views
 The above functions utilize the following custom views. Each view is listed along with the code used to generate it.
 
-### 1.tlogs:  View that displays total logs per day
+### 1. tlogs:  View that displays total logs per day
 The code used to create the custom 
 
 `CREATE VIEW tlogs as
