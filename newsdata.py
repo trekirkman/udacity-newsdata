@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # newsdata.py — an internal db reporting tool
 # Written & submitted by Tremaine Kirkman
 
