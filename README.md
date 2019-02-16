@@ -2,7 +2,7 @@
 
 ## Overview
 
-**newsdata.py** is a database reporting tool written in Python 3 for the Udacity Full Stack Nanodegree program. It connects to the **newsdata.sql** database, which features information relating to a hypothetical web-based news platform. The program executes PostgreSQL queries and prints the resulting data in a formatted list.
+**newsdata.py** is a database reporting tool written in Python (2.7) for the Udacity Full Stack Nanodegree program. It connects to the **newsdata.sql** database, which features information relating to a hypothetical web-based news platform. The program executes PostgreSQL queries and prints the resulting data in a formatted list.
 
 This tool seeks to answer the following questions:
 1. Who are the top 3 most popular authors on this site, ranked by article views?
@@ -23,7 +23,7 @@ Python file containing all code to execute the queries and print results
 
 ## Instructions
 
-### Install Python 3
+### Install Python 2.7
 Download can be found [here](https://www.python.org/downloads/)
 
 ### Install Virtual Box
