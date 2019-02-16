@@ -31,13 +31,20 @@ VirtualBox is software that runs the Virtual Machine (VM) that will be used to r
 
 ### Install Vagrant
 Vagrant configures the VM and establishes a shared directory between the VM and your local filesystem. Download [here](https://www.vagrantup.com/downloads.html), navigate to the vagrant directory and run
+
 ```vagrant up```
-to set up the VM. Note: this process should take a while. When finished run
+
+to set up the VM. Note: this process should take a while. 
+
+When finished run
+
 ```vagrant ssh``` 
+
 to log in to the virtual machine. For more information, see the Vagrant documentation [here](https://www.vagrantup.com/docs/).
 
 ### Download Database
 Download `newsdata.sql`, found [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) and place in your vagrant directory. To connect to the database run:
+
 ```psql -d news -f newsdata.sql```
 
 ### Create Custom SQL Views
@@ -45,6 +52,7 @@ Download `newsdata.sql`, found [here](https://d17h27t6h515a5.cloudfront.net/toph
 
 ### Download Program & Run
 Download `newsdata.py` file to the same directory in the VM as newsdata.sql, and run:
+
 ```python newsdata.py```
 
 ---
