@@ -3,9 +3,13 @@ Top 3 Articles of All Time:
 2. "Bears love berries, alleges bear" - 253801 views
 3. "Bad things gone, say good people" - 170098 views
 Author popularity:
-1. Ursula La Multa - 507594 views
-2. Rudolf von Treppenwitz - 423457 views
+1. Rudolf von Treppenwitz - 338647 views
+2. Ursula La Multa - 253801 views
 3. Anonymous Contributor - 170098 views
-4. Markoff Chaney - 84557 views
+4. Ursula La Multa - 84906 views
+5. Rudolf von Treppenwitz - 84810 views
+6. Markoff Chaney - 84557 views
+7. Ursula La Multa - 84504 views
+8. Ursula La Multa - 84383 views
 Days with error rate over 1%
 1. July 17, 2016 - 2.3% errors

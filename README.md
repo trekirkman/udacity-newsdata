@@ -60,11 +60,11 @@ Download `newsdata.py` file to the same directory in the VM as newsdata.sql, and
 ## Custom Views
 `newsdata.py` makes use of two custom SQL Views for convenience. To create these views connect to the `newsdata.sql` database and run the commands below:
 
-### 1. tlogs:  View that displays total logs per day
+### 1. t_logs:  View that displays total logs per day
 The code used to create the custom 
 
 ```
-CREATE VIEW tlogs as
+CREATE VIEW t_logs as
 SELECT date_trunc('day', time) as day, 
 count(*) as total 
 FROM log 
@@ -72,10 +72,10 @@ GROUP BY day;
 ```
 
 
-### 2. elogs: View that displays total logs per day with an error status code
+### 2. e_logs: View that displays total logs per day with an error status code
 
 ```
-CREATE VIEW elogs as
+CREATE VIEW e_logs as
 SELECT date_trunc('day', time) as day, 
 count(*) as errors 
 FROM log 
