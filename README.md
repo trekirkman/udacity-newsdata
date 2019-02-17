@@ -63,8 +63,17 @@ Download `newsdata.py` file to the same directory in the VM as newsdata.sql, and
 ## Custom Views
 `newsdata.py` makes use of three custom SQL Views for convenience. The code used to create these views is listed below:
 
-### 1. t_logs:  View that displays total logs per day
-The code used to create the custom 
+
+### 1. log_path:  View that displays log paths and associated view counts
+
+```sql
+SELECT path, count(*) AS views
+FROM log
+GROUP BY log.path;
+```
+
+
+### 2. t_logs:  View that displays total logs per day
 
 ```sql
 CREATE VIEW t_logs as
@@ -75,7 +84,7 @@ GROUP BY day;
 ```
 
 
-### 2. e_logs: View that displays total logs per day with an error status code
+### 3. e_logs: View that displays total logs per day with an error status code
 
 ```sql
 CREATE VIEW e_logs as

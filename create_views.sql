@@ -3,10 +3,9 @@
 --
 
 CREATE VIEW log_path as
-    SELECT date_trunc('day', time) as day, 
-    count(*) as total 
-    FROM log 
-    GROUP BY day;
+    SELECT path, count(*) AS views
+    FROM log
+    GROUP BY log.path;
 
 GO
 
