@@ -30,7 +30,7 @@ Download can be found [here](https://www.python.org/downloads/)
 VirtualBox is software that runs the Virtual Machine (VM) that will be used to run this program. Download [here](https://www.virtualbox.org/wiki/Downloads), and install the platform package. Note: you do not need the extension pack, SDK or to launch the program
 
 ### Install Vagrant
-Vagrant configures the VM and establishes a shared directory between the VM and your local filesystem. Download [here](https://www.vagrantup.com/downloads.html), navigate to the vagrant directory and run
+Vagrant configures the VM and establishes a shared directory between the VM and your local filesystem. Download [here](https://www.vagrantup.com/downloads.html) and download `vagrantfile` from this repo. Navigate to the directory containing `vagrantfile` and run
 
 ```vagrant up```
 
@@ -48,7 +48,10 @@ Download `newsdata.sql`, found [here](https://d17h27t6h515a5.cloudfront.net/toph
 ```psql -d news -f newsdata.sql```
 
 ### Create Custom SQL Views
-`newsdata.py` makes use of two custom SQL Views for convenience. From the command line, run the code located in the Custom Views section below.
+`newsdata.py` makes use of three custom SQL Views for convenience. Download `create_views.sql` and then import the views:
+
+```psql -d news -f create_views.sql```
+
 
 ### Download Program & Run
 Download `newsdata.py` file to the same directory in the VM as newsdata.sql, and run:
@@ -58,12 +61,12 @@ Download `newsdata.py` file to the same directory in the VM as newsdata.sql, and
 ---
 
 ## Custom Views
-`newsdata.py` makes use of two custom SQL Views for convenience. To create these views connect to the `newsdata.sql` database and run the commands below:
+`newsdata.py` makes use of three custom SQL Views for convenience. The code used to create these views is listed below:
 
 ### 1. t_logs:  View that displays total logs per day
 The code used to create the custom 
 
-```
+```sql
 CREATE VIEW t_logs as
 SELECT date_trunc('day', time) as day, 
 count(*) as total 
@@ -74,7 +77,7 @@ GROUP BY day;
 
 ### 2. e_logs: View that displays total logs per day with an error status code
 
-```
+```sql
 CREATE VIEW e_logs as
 SELECT date_trunc('day', time) as day, 
 count(*) as errors 
